@@ -1,15 +1,14 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     CinemachineVirtualCamera virtualCamera;
     public Transform target;
-    public bool canClampAngle;                              //cameranýn y axis indeki açýlarý sýnýrlamak için
 
     public float rotationSpeed = 1f;
+    public bool canClampAngle;                              //cameranýn y axis indeki açýlarý sýnýrlamak için
+
     public float minYAngle = -80f;
     public float maxYAngle = 80f;
 
@@ -21,7 +20,7 @@ public class CameraController : MonoBehaviour
     {
         virtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
-    void LateUpdate()
+    void FixedUpdate()
     {
         // get mouse movement
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;

@@ -89,7 +89,7 @@ InputManager:
     m_Name: Fire3
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: left alt
     positiveButton: left shift
     altNegativeButton: 
     altPositiveButton: mouse 2
