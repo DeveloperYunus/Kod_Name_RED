@@ -1,5 +1,4 @@
 # Airplane and Jet Physics
-* asda
 # Uçak ve Jet Fiziği
 
 Bir oyuna dönüştürmek için başladığım projenin uçak fizik sistemini github kasmak için yayınladığım repo. :D
