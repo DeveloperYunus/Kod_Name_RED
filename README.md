@@ -3,7 +3,7 @@
 
 Bir oyuna dönüştürmek için başladığım projenin uçak fizik sistemini github kasmak için yayınladığım repo. :D
 
-Bu projede yazdığım uçak fizik kodları aşağıdaki projeden baz alınmıştır.
+Bu projeye eklediğim uçak fizik kodları aşağıdaki projeden alınmıştır.
 
   - Link : https://github.com/melowntech/VtsJetFighter
 
