@@ -1,1 +1,5 @@
-- Camera sistemini düzenle
+- Uçak kanatlarýnýn animasyonlarý ayarlanacak - gerçe uçak modeli ile ayarlanacak
+
+- uçak çarpýnca havaya uçsun ve kamera farklý bir açýya doðru blend olsun
+- uçak mermi ateþlesin
+- uçak roket ateþlesin

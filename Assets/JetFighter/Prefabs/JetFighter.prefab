@@ -61,8 +61,8 @@ MonoBehaviour:
   m_LookaheadTime: 0.01
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 0.4
+  m_XDamping: 0.2
+  m_YDamping: 0.25
   m_ZDamping: 0.2
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -740,7 +740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7100308726270457394
 Transform:
   m_ObjectHideFlags: 0
