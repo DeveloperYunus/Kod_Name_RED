@@ -20,7 +20,8 @@ public class JetController : MonoBehaviour
     float aeroFactor;
     float Altitude;                                             // rakým - yerden yükseklik
 
-    float throttleAmount, pitch, roll, yaw;
+    [HideInInspector] public float throttleAmount;
+    float pitch, roll, yaw;
     float thTimer;                      
     Rigidbody rb;
 
@@ -31,15 +32,24 @@ public class JetController : MonoBehaviour
     float originalAngularDrag;                                  // Sahne baþýndaki açýsal sürtünme miktarý
 
 
+    [Header("Animation")]
+    public Animator anm;
+    bool gearDown;
+
+    [Header("VFX")]
+    public ParticleSystem jetFirePs;
+    ParticleSystem.MainModule jetFireMain;
+    float jetVFXTimer;
+
+
     [Header("Texts")]
     public TextMeshProUGUI throttleTxt;
     public TextMeshProUGUI speedTxt;
 
-
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        jetFireMain = jetFirePs.main;
 
         //Sürekli güncelleneceði için uçaðýn baþlangýçtaki sürtünme miktarlarý kaydedilir
         originalDrag = rb.drag;
@@ -52,14 +62,33 @@ public class JetController : MonoBehaviour
         EnginePower = 0;
         aeroFactor = 0;
 
+        gearDown = true;
+
         throttleTxt.text = "0"+ " %";
         speedTxt.text = "0";
     }
     void Update()
     {   
-            // Sahenyi resetlemek için 
+        // Sahenyi resetlemek için 
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {            
+            if (!gearDown)//ekipmaný aþaðý indir
+            {
+                print("aþaðý");
+                gearDown = true;
+                anm.SetBool("GearDown", true);
+            }
+            else if (ForwardSpeed > 90) //hýzým 90 dan büyükse ekipmaný yukarý çek
+            {
+                print("yukarý");
+                gearDown = false;
+                anm.SetBool("GearDown", false);
+            }   
+        }
+
 
         pitch = pitchContSens * Input.GetAxis("Vertical");          //W, S  --  yukarý aþaðý
         roll = rollContSens * Input.GetAxis("Horizontal");          //A, D  --  kendi ekseni etrafýnda döner
@@ -67,9 +96,7 @@ public class JetController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log("DÝKKAT BURASI ÖNEMLÝ, Script'in içine gir ve alttaki satýrý oku.");
         //Burasý ÖNEMLÝ!! aþaðýdaki kodun çalýþmasý için Project Settings -> Input Manager -> Fire3 -> Negative Button = left alt, Positive Button = left shift olarak ayarlanmalý
-
         //Uçaðýn itme kuvvetini arttýrmak yada azaltmak için kullanýlýr
         if (Input.GetAxis("Fire3") > 0 && thTimer > 0 && throttleAmount < 1)
         {
@@ -84,11 +111,27 @@ public class JetController : MonoBehaviour
         else thTimer += Time.fixedDeltaTime;
 
         //Ýtme 0 dan büyükse motor etkilerini uygula
-        if (throttleAmount > 0)
+        
+
+        if (jetVFXTimer < 0)
         {
-            EnginePower = throttleAmount * m_MaxEnginePower;
-            throttleTxt.text = (throttleAmount * 100).ToString("0") + " %";
+            jetVFXTimer = 0.1f;
+            jetFireMain.startLifetime = throttleAmount * 0.1f;                                              //itme kuvvetine göre motordan çýkan ateþi artýrý
+
+            if (throttleAmount > 0)
+            {
+                jetFirePs.Play(false);
+                //itme sýfýrdan büyükse motor gücünü günceller
+                EnginePower = throttleAmount * m_MaxEnginePower;
+                throttleTxt.text = (throttleAmount * 100).ToString("0") + " %";
+            }
+            else
+            {
+                jetFirePs.Stop(false);
+            }
         }
+        else
+            jetVFXTimer -= Time.fixedDeltaTime;
 
         speedTxt.text = ForwardSpeed.ToString("0.0") + " km/h";
 
