@@ -11,4 +11,4 @@ Bu projeye eklediğim uçak fizik kodları aşağıdaki projeden alınmıştır.
   - Uçuş etkisinin daha iyi anlaşılabilmesi için bir seviye tasarlanmıştır.
   - Son olarak da CinemachineVirtualCamera - Framing Transposer ile uçuşa uygun bir camera oluşturulmuştur.
 
-[<img src="https://imgur.com/a211a05d-f9cf-4afd-b895-94ca3f9610a8" width="50%">](https://www.youtube.com/watch?v=72S1mpKRuck "Now in Android: 55")
+[<img src="https://imgur.com/d1yhYSH" width="50%">](https://www.youtube.com/watch?v=72S1mpKRuck "Now in Android: 55")
