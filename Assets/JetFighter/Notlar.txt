@@ -1,5 +1,9 @@
 - Uçak kanatlarýnýn animasyonlarý ayarlanacak - gerçe uçak modeli ile ayarlanacak
 
-- uçak çarpýnca havaya uçsun ve kamera farklý bir açýya doðru blend olsun
+
+	YAPILABÝLÝR
+
+- Hýzlandýkca kamera arkada kalsýn yada görüþ açýmýz deðiþsin gibi bir effect
 - uçak mermi ateþlesin
 - uçak roket ateþlesin
+

@@ -77,13 +77,11 @@ public class JetController : MonoBehaviour
         {            
             if (!gearDown)//ekipmaný aþaðý indir
             {
-                print("aþaðý");
                 gearDown = true;
                 anm.SetBool("GearDown", true);
             }
             else if (ForwardSpeed > 90) //hýzým 90 dan büyükse ekipmaný yukarý çek
             {
-                print("yukarý");
                 gearDown = false;
                 anm.SetBool("GearDown", false);
             }   
