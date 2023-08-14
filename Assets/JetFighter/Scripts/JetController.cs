@@ -1,16 +1,17 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class JetController : MonoBehaviour
 {
-    [Header("Jet Physics Value")]
+    [Header("--- Jet Physics Value ---")]
     [SerializeField] float m_MaxEnginePower = 40;               // Motorun maksimum gücünü belirler
     [SerializeField] float m_AerodynamicEffect = 0.02f;         // Aerodinemiðin uçak hýzýný ne kadar etkilediðini belirle
     [SerializeField] float m_Lift = 0.002f;                     // Uçak ileri doðrultuda giderken (forward) ne kadar "Lift" kuveeti tarafýndan etkilenir - Lift = uçaðý kaldýran kuvvet
     [SerializeField] float m_ZeroLiftSpeed = 300;               // Bu hýz sýnýrý aþýldýktan sonra Lift uygulanmaz
 
-    [Header("Jet Physics Value")]                               
+    [Header("--- Jet Control Value ---")]                               
     [SerializeField] float pitchContSens;                       //W, S  --  yukarý aþaðý kontrol hassasiyeti
     [SerializeField] float rollContSens;                        //A, D  --  kendi ekseni etrafýndaki kontrol hassasiyeti
     [SerializeField] float yawContSens;                         //Q, E  --  sað, sol kontrol hassasiyeti
@@ -25,31 +26,36 @@ public class JetController : MonoBehaviour
     float thTimer;                      
     Rigidbody rb;
 
-
-    [Header("Drag")]
+    [Header("--- Drag ---")]
     [SerializeField]  float dragIncreaseFactor = 0.001f;        // Hýz arttýkça artacak olan sürtünme miktarý
     float originalDrag;                                         // Sahne baþýndaki sürtünme miktarý
     float originalAngularDrag;                                  // Sahne baþýndaki açýsal sürtünme miktarý
 
 
-    [Header("Animation")]
-    public Animator anm;
+    [Header("--- Gear ---")]
+    [SerializeField] private Transform gear;
     bool gearDown;
-
-    [Header("VFX")]
-    public ParticleSystem jetFirePs;
-    ParticleSystem.MainModule jetFireMain;
     float jetVFXTimer;
 
 
-    [Header("Texts")]
+
+
+    [Header("--- Texts ---")]
     public TextMeshProUGUI throttleTxt;
     public TextMeshProUGUI speedTxt;
+
+
+    //---------------   Events  -------------------
+
+    public delegate void EngineVFXPlay(bool vfxPlay, bool vfxChildControl);
+    public static event EngineVFXPlay JetEngineVfx;
+
+    public delegate void OneFloat(float value);
+    public static event OneFloat EngineVFXStartTime;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        jetFireMain = jetFirePs.main;
 
         //Sürekli güncelleneceði için uçaðýn baþlangýçtaki sürtünme miktarlarý kaydedilir
         originalDrag = rb.drag;
@@ -61,6 +67,7 @@ public class JetController : MonoBehaviour
         ForwardSpeed = 0;
         EnginePower = 0;
         aeroFactor = 0;
+        jetVFXTimer = -1;
 
         gearDown = true;
 
@@ -78,12 +85,16 @@ public class JetController : MonoBehaviour
             if (!gearDown)//ekipmaný aþaðý indir
             {
                 gearDown = true;
-                anm.SetBool("GearDown", true);
+
+                gear.DOKill();
+                gear.DOScaleY(0, 1f);
             }
             else if (ForwardSpeed > 90) //hýzým 90 dan büyükse ekipmaný yukarý çek
             {
                 gearDown = false;
-                anm.SetBool("GearDown", false);
+
+                gear.DOKill();
+                gear.DOScaleY(1, 1f);
             }   
         }
 
@@ -114,24 +125,28 @@ public class JetController : MonoBehaviour
         if (jetVFXTimer < 0)
         {
             jetVFXTimer = 0.1f;
-            jetFireMain.startLifetime = throttleAmount * 0.1f;                                              //itme kuvvetine göre motordan çýkan ateþi artýrý
+            EngineVFXStartTime?.Invoke(throttleAmount * 0.1f);
 
             if (throttleAmount > 0)
             {
-                jetFirePs.Play(false);
+                JetEngineVfx?.Invoke(true, false);
+
                 //itme sýfýrdan büyükse motor gücünü günceller
                 EnginePower = throttleAmount * m_MaxEnginePower;
+
                 throttleTxt.text = (throttleAmount * 100).ToString("0") + " %";
+                speedTxt.text = ForwardSpeed.ToString("0.0") + " km/h";
             }
             else
             {
-                jetFirePs.Stop(false);
+                JetEngineVfx?.Invoke(false, false);
+                speedTxt.text = "0.0" + " km/h";
             }
         }
         else
             jetVFXTimer -= Time.fixedDeltaTime;
 
-        speedTxt.text = ForwardSpeed.ToString("0.0") + " km/h";
+        
 
         CalculateForwardSpeed();
 
