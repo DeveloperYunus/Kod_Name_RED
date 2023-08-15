@@ -29,3 +29,12 @@ Overloading
 
 List – Properties 
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
+
+
+
+	GENEL MADDELER
+- Post procesing yapýlacak - Global volume'un içine yapýlacak
+- Water eklenecek
+- Gemiler eklencek
+- Kýzýl elma eklenecek
+- Çöl terraini eklenecek
