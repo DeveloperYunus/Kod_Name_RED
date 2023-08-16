@@ -1,14 +1,17 @@
-# Airplane and Jet Physics
-# Uçak ve Jet Fiziği
+# Kod Name : RED
 
-Bir oyuna dönüştürmek için başladığım projenin uçak fizik sistemini github kasmak için yayınladığım repo. :D
+### A jet fighter game.
 
-Bu projeye eklediğim uçak fizik kodları aşağıdaki projeden alınmıştır.
-
+The aircraft physics codes I added to this project have been taken from the repository below.
   - Link : https://github.com/melowntech/VtsJetFighter
 
-  - Fonksiyonlar esas repodan alınarak tek tek eklenmiş ve her birin çalışma şekilleri ve işlevleri gözlemlenmiştir. Türkçe bir kaynak olması açısından yorum satırları çevrilmiştir.
-  - Uçuş etkisinin daha iyi anlaşılabilmesi için bir seviye tasarlanmıştır.
-  - Son olarak da CinemachineVirtualCamera - Framing Transposer ile uçuşa uygun bir camera oluşturulmuştur.
+------------------------------------------
 
-[<img src="https://i.imgur.com/d1yhYSH.png" width="50%">](https://www.youtube.com/watch?v=0itrM1_Xak4&t=22s "Now in Android: 55")
+  - Firstly, all aircraft physics codes were read individually and added to this project. And the explanatory comments are left in my native language for it to be a Turkish resource.
+  - CinemachineVirtualCamera - Framing Transposer ile uçuşa uygun bir camera oluşturulmuştur.
+
+## For go first devlog video, click on the photo below
+[<img src="" width="80%">]()
+
+## For go second devlog video, click on the photo below
+[<img src="https://i.imgur.com/d1yhYSH.png" width="80%">](https://www.youtube.com/watch?v=0itrM1_Xak4&t=22s "Now in Android: 55")
