@@ -12,7 +12,7 @@ The aircraft physics codes I added to this project have been taken from the repo
   - A camera suitable for flight has been created using CinemachineVirtualCamera with the Framing Transposer.
 
 ### For go video, click on the photo below
-[<img src="" width="80%">]()
+[<img src="https://i.imgur.com/ppuPRZp.png" width="80%">](https://www.youtube.com/watch?v=Nmq6bP5_e4k&t=22s)
 
 -----
 
