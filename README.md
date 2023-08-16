@@ -3,6 +3,7 @@
 ### A jet fighter game.
 
 The aircraft physics codes I added to this project have been taken from the repository next to it. https://github.com/melowntech/VtsJetFighter
+Uçak fizik sistemi, uçak fizik kodları, uçak kinematik sistemi, uçak kinematik codları
 
 -----
 
@@ -30,6 +31,3 @@ The aircraft physics codes I added to this project have been taken from the repo
 -----
 
 ## Third Devlog : Loading ...
-
-<br><br><br>
-Uçak fizik sistemi, uçak fizik kodları, uçak kinematik sistemi, uçak kinematik codları
