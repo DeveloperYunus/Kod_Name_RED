@@ -30,6 +30,5 @@ The aircraft physics codes I added to this project have been taken from the repo
 -----
 
 
-\n
-\n
+<br><br><br>
 Uçak fizik sistemi, uçak fizik kodları, uçak kinematik sistemi, uçak kinematik codları
