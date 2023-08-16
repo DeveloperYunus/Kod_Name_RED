@@ -1,6 +1,6 @@
 # Kod Name : RED
 
-### A jet fighter game.
+### A jet fighter game. (Uçak fizik-kinematic sistemi, codları)
 
 The aircraft physics codes I added to this project have been taken from the repository next to it. https://github.com/melowntech/VtsJetFighter
 
