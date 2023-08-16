@@ -34,7 +34,4 @@ List – Properties
 
 	GENEL MADDELER
 - Post procesing yapýlacak - Global volume'un içine yapýlacak
-- Water eklenecek
-- Gemiler eklencek
-- Kýzýl elma eklenecek
 - Çöl terraini eklenecek

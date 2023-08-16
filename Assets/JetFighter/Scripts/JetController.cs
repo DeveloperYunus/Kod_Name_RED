@@ -34,10 +34,8 @@ public class JetController : MonoBehaviour
 
     [Header("--- Gear ---")]
     [SerializeField] private Transform gear;
-    bool gearDown;
+    bool gearOpen;
     float jetVFXTimer;
-
-
 
 
     [Header("--- Texts ---")]
@@ -69,7 +67,7 @@ public class JetController : MonoBehaviour
         aeroFactor = 0;
         jetVFXTimer = -1;
 
-        gearDown = true;
+        gearOpen = true;
 
         throttleTxt.text = "0"+ " %";
         speedTxt.text = "0";
@@ -82,19 +80,19 @@ public class JetController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {            
-            if (!gearDown)//ekipmaný aþaðý indir
+            if (!gearOpen)
             {
-                gearDown = true;
-
-                gear.DOKill();
-                gear.DOScaleY(0, 1f);
-            }
-            else if (ForwardSpeed > 90) //hýzým 90 dan büyükse ekipmaný yukarý çek
-            {
-                gearDown = false;
+                gearOpen = true;
 
                 gear.DOKill();
                 gear.DOScaleY(1, 1f);
+            }
+            else if (ForwardSpeed > 90) //hýzým 90 dan büyükse ekipmaný yukarý çek
+            {
+                gearOpen = false;
+
+                gear.DOKill();
+                gear.DOScaleY(0, 1f);
             }   
         }
 

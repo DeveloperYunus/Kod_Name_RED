@@ -5,6 +5,7 @@ public class JetHealth : MonoBehaviour
     [Header("Health System")]
     public float maxHealth;
     public float armour;
+    public float dieCrashImpulse;
 
     float health;
     bool live = true;
@@ -20,7 +21,7 @@ public class JetHealth : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.impulse.magnitude > 4 && live)
+        if (collision.impulse.magnitude > dieCrashImpulse && live)
         {
             live = false;
 
