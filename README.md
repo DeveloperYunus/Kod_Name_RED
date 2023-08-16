@@ -6,7 +6,7 @@ The aircraft physics codes I added to this project have been taken from the repo
 
 -----
 
-## Second Devlog : Basic Aircraft Physics
+## First Devlog : Basic Aircraft Physics
 
   - Firstly, all aircraft physics codes were read individually and added to this project. And the explanatory comments are left in my native language for it to be a Turkish resource.
   - A camera suitable for flight has been created using CinemachineVirtualCamera with the Framing Transposer.
