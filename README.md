@@ -2,7 +2,7 @@
 
 ### A jet fighter game.
 
-The aircraft physics codes I added to this project have been taken from the repository below. https://github.com/melowntech/VtsJetFighter
+The aircraft physics codes I added to this project have been taken from the repository next to it. https://github.com/melowntech/VtsJetFighter
 
 -----
 
