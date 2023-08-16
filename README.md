@@ -25,7 +25,7 @@ The aircraft physics codes I added to this project have been taken from the repo
   - New jet model added.
 
 ### For go video, click on the photo below
-[<img src="https://i.imgur.com/d1yhYSH.png" width="80%">](https://www.youtube.com/watch?v=0itrM1_Xak4&t=22s "Now in Android: 55")
+[<img src="https://i.imgur.com/d1yhYSH.png" width="80%">](https://www.youtube.com/watch?v=0itrM1_Xak4&t=22s)
 
 -----
 
