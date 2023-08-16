@@ -5,7 +5,7 @@
 The aircraft physics codes I added to this project have been taken from the repository below.
   - Link : https://github.com/melowntech/VtsJetFighter
 
---
+---
 
 ## First Devlod : Basic Aircraft Physics
 
@@ -15,5 +15,14 @@ The aircraft physics codes I added to this project have been taken from the repo
 ### For go video, click on the photo below
 [<img src="" width="80%">]()
 
+---
+
+## First Devlod : Visualization and Adjusting
+
+  -
+  - 
+
 ### For go video, click on the photo below
 [<img src="https://i.imgur.com/d1yhYSH.png" width="80%">](https://www.youtube.com/watch?v=0itrM1_Xak4&t=22s "Now in Android: 55")
+
+---
