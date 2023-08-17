@@ -33,5 +33,5 @@ List – Properties
 
 
 	GENEL MADDELER
-- Post procesing yapýlacak - Global volume'un içine yapýlacak
-- Çöl terraini eklenecek
+sýrasýyla HDRI sky ve fog volume'u ayarlanacak
+En son da post processing ayarlanacak
