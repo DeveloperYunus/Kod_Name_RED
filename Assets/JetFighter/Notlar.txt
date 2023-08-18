@@ -29,9 +29,3 @@ Overloading
 
 List – Properties 
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
-
-
-
-	GENEL MADDELER
-sýrasýyla HDRI sky ve fog volume'u ayarlanacak
-En son da post processing ayarlanacak
