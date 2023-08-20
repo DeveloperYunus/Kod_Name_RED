@@ -1,32 +1,7 @@
-- Uçak kanatlarýnýn animasyonlarý ayarlanacak - gerçe uçak modeli ile ayarlanacak
 
-
-	YAPILABÝLÝR
-
-- Hýzlandýkca kamera arkada kalsýn yada görüþ açýmýz deðiþsin gibi bir effect
-- uçak mermi ateþlesin
-- uçak roket ateþlesin
-
-
-
-Overriding – Class Heretics
+Overriding – Class Heretics --- Bitti
 	Ayný classdan heretic alan 2 adet silah (ak-47, m4) olacak. Özellik tipleri ayný olacak statlarý farklý olacak. 
 	Ana classdan birkaç fonksiyon alacaklar ancak kendi içlerinde özelleþtikleri için bu fonksiyonlarý override edip özel olanlarý yazacaðým.
-
-	1. silah minigun
-		- Saldýrý hýzý 0.5f
-		- Hasar		   1
-		
-	2. silah tüfek
-		- Saldýrý hýzý 1.5f
-		- Hasar		   5
-
-	ortak fonksiyonalar 
-			- Fire();
-			- Silah adýný yazdýran bir script olsun 
-				- normalde "Weapon" çýktýsý versin
-				- 1. silahda "minigun" desin
-				- 2. silahda "rifle" desin
 
 	!!! Mermiler için ayný prefabý ve object pooling'i kullan
 
@@ -49,3 +24,6 @@ Interface – Singelton - Overloading
 
 List – Properties 
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
+
+
+	Assemble optimization gibi birþey vardý ne olduðu öðren ve kullan
