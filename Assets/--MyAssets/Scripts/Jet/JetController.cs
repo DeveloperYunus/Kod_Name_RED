@@ -106,7 +106,7 @@ public class JetController : MonoBehaviour
     {
         //Burasý ÖNEMLÝ!! aþaðýdaki kodun çalýþmasý için Project Settings -> Input Manager -> Fire3 -> Negative Button = left alt, Positive Button = left shift olarak ayarlanmalý
         //Uçaðýn itme kuvvetini arttýrmak yada azaltmak için kullanýlýr
-        if (Input.GetAxis("Fire3") > 0 && thTimer > 0 && throttleAmount < 1)
+        if (Input.GetAxis("Fire3") > 0 && thTimer > 0 && throttleAmount < 0.99f)
         {
             thTimer = -0.08f;
             throttleAmount += 0.01f;

@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponClass : MonoBehaviour
 {
-    public void Fire(Transform muzzle, GameObject bullet, float bulletSpeed, float destroyTime)
+    public void Fire(Transform muzzle, float bulletSpeed, float destroyTime, float bulletDamage)
     {
-        GameObject insBullet = Instantiate(bullet, muzzle.position, muzzle.rotation);
+        GameObject insBullet = GeneralPool.bulletPool.HavuzdanObjeCek();
 
+        insBullet.transform.SetPositionAndRotation(muzzle.position, muzzle.rotation);
         insBullet.GetComponent<Bullet>().GoForward(bulletSpeed, muzzle);
-        Destroy(insBullet, destroyTime);
+        insBullet.GetComponent<Bullet>().SetDefaultProces(destroyTime, bulletDamage);
     }
 
     public virtual void SayYourName(string name)

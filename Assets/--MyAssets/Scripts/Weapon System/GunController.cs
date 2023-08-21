@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletObj;
-
-    [Header("----- GUNS -----")]
+    [Header("       ----- GUNS -----")]
 
     [Header("--- Minigun ---")]
     [SerializeField] private Minigun minigun;
+    [SerializeField] private float minigunBulletDamage;
     [SerializeField] private Transform minigunMuzzle1;
     [SerializeField] private Transform minigunMuzzle2;
     [SerializeField] private float minigunBulletSpeed;
@@ -19,6 +18,7 @@ public class GunController : MonoBehaviour
    
     [Header("--- Rifle ---")]
     [SerializeField] private Rifle rifle;
+    [SerializeField] private float rifleBulletDamage;
     [SerializeField] private Transform rifleMuzzle1;
     [SerializeField] private Transform rifleMuzzle2;
     [SerializeField] private float rifleBulletSpeed;
@@ -57,7 +57,6 @@ public class GunController : MonoBehaviour
             }
             else
                 attackSpeed -=Time.deltaTime;
-            
         }
     }
 
@@ -75,8 +74,8 @@ public class GunController : MonoBehaviour
 
         if (minigun.enabled)
         {
-            minigun.Fire(minigunMuzzle1, bulletObj, minigunBulletSpeed + jetSpeed, minigunBulletDestroyTime);
-            minigun.Fire(minigunMuzzle2, bulletObj, minigunBulletSpeed + jetSpeed, minigunBulletDestroyTime);
+            minigun.Fire(minigunMuzzle1, minigunBulletSpeed + jetSpeed, minigunBulletDestroyTime, minigunBulletDamage);
+            minigun.Fire(minigunMuzzle2, minigunBulletSpeed + jetSpeed, minigunBulletDestroyTime, minigunBulletDamage);
 
             minigun.SayYourName("unvalid");
 
@@ -86,8 +85,8 @@ public class GunController : MonoBehaviour
         }
         else
         {
-            rifle.Fire(rifleMuzzle1, bulletObj, rifleBulletSpeed + jetSpeed, rifleBulletDestroyTime);
-            rifle.Fire(rifleMuzzle2, bulletObj, rifleBulletSpeed + jetSpeed, rifleBulletDestroyTime);
+            rifle.Fire(rifleMuzzle1, rifleBulletSpeed + jetSpeed, rifleBulletDestroyTime, rifleBulletDamage);
+            rifle.Fire(rifleMuzzle2, rifleBulletSpeed + jetSpeed, rifleBulletDestroyTime, rifleBulletDamage);
 
             rifle.Sparkling();
 

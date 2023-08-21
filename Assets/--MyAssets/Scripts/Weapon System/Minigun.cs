@@ -6,10 +6,10 @@ public class Minigun : WeaponClass
 {
     public void ScreenShake()
     {
-        Debug.Log("Screen shake");
+        //Debug.Log("Screen shake");
     }
     public override void SayYourName(string name)
     {
-        Debug.Log("Overrided minigun");
+        //Debug.Log("Overrided minigun");
     }
 }

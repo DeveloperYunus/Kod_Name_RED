@@ -6,7 +6,7 @@ Overriding – Class Heretics --- Bitti
 	!!! Mermiler için ayný prefabý ve object pooling'i kullan
 
 
-Event System
+Event System - Interface
 	Tek etkileþim ile birbirinden baðýmsýz 3 farklý class dan bir iþlev çaðýr ve iþlevi debug ettir.
 
 	- Gemiler hasar alsýn
@@ -16,14 +16,21 @@ Event System
 
 -----------------------------------------------------------------------------------------------
 
-Interface – Singelton - Overloading
+Singelton - Overloading
 	Üç farklý objede interfaceler kullanýlacak, objeler etkileþim mesafesine girince “E” ile farklý iþlemlerin yapýlmasý saðlanacak. 
 	Etkileþimler sýrasýnda singelton ile diðer sahneye veri taþýnacak ve yeni sahnenin baþýnda bu veriler çekilip kullanýlacak. Gelen veriye göre sonraki sahnedeki
-	 static class da var olan 2 adet fonksiyondan birini çalýþtýr. Bunlardan biri 2 tane sayýsý toplasýn, diðeri 2 adet string’i sayýya çevirip toplasýn.
+	static class da var olan 2 adet fonksiyondan birini çalýþtýr. Bunlardan biri 2 tane sayýsý toplasýn, diðeri 2 adet string’i sayýya çevirip toplasýn.
 
 
 List – Properties 
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
 
 
-	Assemble optimization gibi birþey vardý ne olduðu öðren ve kullan
+
+---
+
+Object poolin i ve diðer scriptleri düzenle, dinamik ve solid hale getir
+
+---
+
+Assemble optimization gibi birþey vardý ne olduðu öðren ve kullan

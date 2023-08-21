@@ -2,25 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour, IPoolable, IDamageGivable<float>
 {
-    Rigidbody rb;
+    [HideInInspector] public ObjectPooling Pool;
+    [HideInInspector] public float Damage;
+
+    Rigidbody _rb;
+
+    public void GiveDamage(float damageAmount)
+    {
+
+    }
+    public void SentObjectToPool()
+    {
+        GetComponent<Bullet>().DieTimer();
+    }
+
+
 
     private void OnEnable()
     {
-        
+
     }
     private void OnDisable()
     {
-        rb.velocity = Vector3.zero;
+        _rb.velocity = Vector3.zero;
     }
+
+
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();    
+        _rb = GetComponent<Rigidbody>();
+        Pool = GeneralPool.bulletPool;
     }
+
+
     public void GoForward(float speed, Transform muzzle)
     {
-        rb.velocity = muzzle.forward * speed;
+        _rb.velocity = muzzle.forward * speed;
+    }
+
+
+    public void SetDefaultProces(float dieTime, float damage)
+    {
+        Damage = damage;
+        Invoke(nameof(DieTimer), dieTime);
+    }
+    public void DieTimer()
+    {
+        Pool.HavuzaObjeEkle(gameObject);
     }
 }
