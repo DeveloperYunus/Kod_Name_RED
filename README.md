@@ -30,4 +30,18 @@ The aircraft physics codes I added to this project have been taken from the repo
 
 -----
 
-## Third Devlog : Loading ...
+## Third Devlog : General Design & Gamefication
+
+  - HDRP established, hdri sky added, volumectic fog and cloud added.
+  - Unity HDRP sea added.
+  - Some military vehicle added (just models)
+  - Level design nearly completed.
+  - KIZILELMA model added.
+  - Added 2 machine guns from the same class that get heretics. (using ObjectPooling)
+
+### For go video, click on the photo below
+[<img src="https://i.imgur.com/wSDYRRo.png" width="80%">](https://www.youtube.com/watch?v=4OMe_t-C04s "Devlog 3 Video")
+
+-----
+
+## Fourth Devlog : Loading ...
