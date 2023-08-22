@@ -13216,7 +13216,7 @@ GameObject:
   - component: {fileID: 1513950789459815572}
   - component: {fileID: 6540042104692661387}
   - component: {fileID: 5570274608613718547}
-  - component: {fileID: 8934472173990686272}
+  - component: {fileID: 9063455319724490303}
   m_Layer: 0
   m_Name: KIZILELMA - Player
   m_TagString: Untagged
@@ -13282,13 +13282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea153938e5be65429d9b7cac93e3bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxEnginePower: 100
+  m_MaxEnginePower: 110
   m_AerodynamicEffect: 0.02
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
-  pitchContSens: 0.6
+  pitchContSens: 0.7
   rollContSens: 0.1
-  yawContSens: -0.6
+  yawContSens: -0.68
   throttleAmount: 0
   dragIncreaseFactor: 0.001
   gear: {fileID: 5557667320813485497}
@@ -13345,42 +13345,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31bc3226d8cc4646bca8c0bc4d11135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletObj: {fileID: 7373730592777108025, guid: 30970dbab1fc07f4c93ac34ca0882dc5,
-    type: 3}
   minigun: {fileID: 1898854982426622677}
+  minigunBulletDamage: 3
   minigunMuzzle1: {fileID: 5943804344787695687}
   minigunMuzzle2: {fileID: 986602195269447881}
-  minigunBulletSpeed: 140
-  minigunBulletDestroyTime: 5
-  minigunAttackSpeed: 0.1
+  minigunBulletSpeed: 250
+  minigunBulletDestroyTime: 8
+  minigunAttackSpeed: 0.08
   rifle: {fileID: 7084569020042416967}
+  rifleBulletDamage: 15
   rifleMuzzle1: {fileID: 533498233698904190}
   rifleMuzzle2: {fileID: 8637523453506480242}
-  rifleBulletSpeed: 200
-  rifleBulletDestroyTime: 4
-  rifleAttackSpeed: 0.3
+  rifleBulletSpeed: 350
+  rifleBulletDestroyTime: 10
+  rifleAttackSpeed: 0.2
   activeGunText: {fileID: 0}
---- !u!65 &8934472173990686272
-BoxCollider:
+--- !u!114 &9063455319724490303
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2565071569030942075}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7456958085de84f816203abc01ceff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JetLevel: 1
+  neededKillScoreForLevelUp: 3
 --- !u!1 &2569217326890003839
 GameObject:
   m_ObjectHideFlags: 0

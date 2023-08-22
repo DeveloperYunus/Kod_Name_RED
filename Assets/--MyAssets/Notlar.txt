@@ -6,13 +6,12 @@ Overriding – Class Heretics --- Bitti
 	!!! Mermiler için ayný prefabý ve object pooling'i kullan
 
 
-Event System - Interface
+Event System - Interface --- Bitti
 	Tek etkileþim ile birbirinden baðýmsýz 3 farklý class dan bir iþlev çaðýr ve iþlevi debug ettir.
 
 	- Gemiler hasar alsýn
 	- öldüklerinde öldürülen gemi sayýsý bir artsýn
 	- 2 gemi öldürünce uçak seviye atlasýn ve bu deðerler dinamik olsun
-
 
 -----------------------------------------------------------------------------------------------
 
@@ -30,6 +29,7 @@ List – Properties
 ---
 
 Object poolin i ve diðer scriptleri düzenle, dinamik ve solid hale getir
+Eventler tekrarlý fonksiyonlarda çalýþtýrýlýrmý
 
 ---
 

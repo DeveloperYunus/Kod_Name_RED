@@ -45,8 +45,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 79577.47
-  m_Range: 10
+  m_Intensity: 150591.56
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -107,9 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 3183.0989
+  m_Intensity: 4183.099
   m_EnableSpotReflector: 1
-  m_LuxAtDistance: 5
+  m_LuxAtDistance: 6
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
@@ -247,12 +247,12 @@ Transform:
   m_GameObject: {fileID: 7373730592777108025}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 375.09, y: 20.616, z: 1838.4}
-  m_LocalScale: {x: 39.1425, y: 39.1425, z: 15.657001}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 60.165, y: 60.165, z: 18.840069}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 731866764381917942}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &53926089430743061
 MeshFilter:
