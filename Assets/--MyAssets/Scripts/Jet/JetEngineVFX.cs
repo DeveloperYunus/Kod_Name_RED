@@ -6,13 +6,10 @@ public class JetEngineVFX : MonoBehaviour
 {
     ParticleSystem engineVFX;
 
-    private void Start()
-    {
-        engineVFX = GetComponent<ParticleSystem>();
-    }
-
     private void OnEnable()
     {
+        engineVFX = GetComponent<ParticleSystem>();
+
         JetController.JetEngineVfx += OnOffEngineVFX;
         JetController.EngineVFXStartTime += SetVFXStartLifeTime;
     }

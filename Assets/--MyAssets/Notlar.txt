@@ -15,9 +15,8 @@ Event System - Interface --- Bitti
 
 -----------------------------------------------------------------------------------------------
 
-Singelton - Overloading
-	Üç farklý objede interfaceler kullanýlacak, objeler etkileþim mesafesine girince “E” ile farklý iþlemlerin yapýlmasý saðlanacak. 
-	Etkileþimler sýrasýnda singelton ile diðer sahneye veri taþýnacak ve yeni sahnenin baþýnda bu veriler çekilip kullanýlacak. Gelen veriye göre sonraki sahnedeki
+Singelton - Overloading --- Bitti
+	Singelton ile diðer sahneye veri taþýnacak ve yeni sahnenin baþýnda bu veriler çekilip kullanýlacak. Gelen veriye göre sonraki sahnedeki
 	static class da var olan 2 adet fonksiyondan birini çalýþtýr. Bunlardan biri 2 tane sayýsý toplasýn, diðeri 2 adet string’i sayýya çevirip toplasýn.
 
 
