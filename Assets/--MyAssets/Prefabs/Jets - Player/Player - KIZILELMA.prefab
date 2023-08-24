@@ -13217,6 +13217,7 @@ GameObject:
   - component: {fileID: 6540042104692661387}
   - component: {fileID: 5570274608613718547}
   - component: {fileID: 9063455319724490303}
+  - component: {fileID: 6206704973380819489}
   m_Layer: 0
   m_Name: Player - KIZILELMA
   m_TagString: Untagged
@@ -13241,7 +13242,7 @@ Transform:
   - {fileID: 2765889823732253997}
   - {fileID: 8761498617943137915}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8977885647031973382
 Rigidbody:
@@ -13286,9 +13287,9 @@ MonoBehaviour:
   m_AerodynamicEffect: 0.02
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
-  pitchContSens: 0.7
-  rollContSens: 0.1
-  yawContSens: -0.68
+  pitchContSens: 0.55
+  rollContSens: 0.08
+  yawContSens: -0.55
   throttleAmount: 0
   dragIncreaseFactor: 0.001
   gear: {fileID: 5557667320813485497}
@@ -13374,6 +13375,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JetLevel: 1
   neededKillScoreForLevelUp: 3
+--- !u!114 &6206704973380819489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565071569030942075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94092809409792c4dbfb956d5ba934cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JetIDNumber: 0
 --- !u!1 &2569217326890003839
 GameObject:
   m_ObjectHideFlags: 0
