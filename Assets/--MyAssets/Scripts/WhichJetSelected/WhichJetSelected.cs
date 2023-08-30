@@ -20,6 +20,7 @@ public class WhichJetSelected : MonoBehaviour
             if (transform.GetChild(i).gameObject.GetComponent<JetID>().JetIDNumber == id)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
+                //CrossAirController.Instance.SetActiveJetTransform(transform.GetChild(i));
                 return;
             }
         }
@@ -35,14 +36,23 @@ public class WhichJetSelected : MonoBehaviour
         }
     }
 
+    void Sum()
+    {
+        SumTwoNumber(2, "1");
+    }
+
     private int SumTwoNumber(int num1, int num2)
     {
         return num1 + num2;
     }
 
+    private int SumTwoNumber(int num1, string num2)
+    {
+        return num1 + int.Parse(num2);
+    }
 
     private int SumTwoNumber(string num1, string num2)
     {
-        return int.Parse(num1 + num2);
+        return int.Parse(num1) + int.Parse(num2);
     }
 }

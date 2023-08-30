@@ -1,9 +1,7 @@
 
 Overriding – Class Heretics --- Bitti
-	Ayný classdan heretic alan 2 adet silah (ak-47, m4) olacak. Özellik tipleri ayný olacak statlarý farklý olacak. 
+	Ayný classdan heretic alan 2 adet silah (minigun, rifle) olacak. Özellik tipleri ayný olacak statlarý farklý olacak. 
 	Ana classdan birkaç fonksiyon alacaklar ancak kendi içlerinde özelleþtikleri için bu fonksiyonlarý override edip özel olanlarý yazacaðým.
-
-	!!! Mermiler için ayný prefabý ve object pooling'i kullan
 
 
 Event System - Interface --- Bitti
@@ -13,23 +11,23 @@ Event System - Interface --- Bitti
 	- öldüklerinde öldürülen gemi sayýsý bir artsýn
 	- 2 gemi öldürünce uçak seviye atlasýn ve bu deðerler dinamik olsun
 
------------------------------------------------------------------------------------------------
 
 Singelton - Overloading --- Bitti
 	Singelton ile diðer sahneye veri taþýnacak ve yeni sahnenin baþýnda bu veriler çekilip kullanýlacak. Gelen veriye göre sonraki sahnedeki
 	static class da var olan 2 adet fonksiyondan birini çalýþtýr. Bunlardan biri 2 tane sayýsý toplasýn, diðeri 2 adet string’i sayýya çevirip toplasýn.
 
 
-List – Properties 
+List – Properties --- Bitti
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
 
 
+	- Güdümlü füzeyi yap
+	- Temas halinde hasar versin ve patlasýn
 
----
+------
 
 Object poolin i ve diðer scriptleri düzenle, dinamik ve solid hale getir
-Eventler tekrarlý fonksiyonlarda çalýþtýrýlýrmý
 
----
+------
 
-Assemble optimization gibi birþey vardý ne olduðu öðren ve kullan
+Addressable optimization'ý kullan

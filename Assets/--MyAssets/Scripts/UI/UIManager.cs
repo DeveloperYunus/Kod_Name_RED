@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +6,8 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     public Transform Camera;
+
+    [SerializeField] private CrossAirController crossAirController;
 
     [SerializeField] private TextMeshProUGUI executedEnemyText;
     [SerializeField] private TextMeshProUGUI jetLevelText;

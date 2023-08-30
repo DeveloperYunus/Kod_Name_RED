@@ -22,6 +22,6 @@ public class JetLevelController : MonoBehaviour
     {
         int a = EnemyVehicleHealth.executedEnemyCount % neededKillScoreForLevelUp;
         if (a == 0)
-            UIManager.Instance.UpdateExecutedEnemyTxt(1 + EnemyVehicleHealth.executedEnemyCount / neededKillScoreForLevelUp);
+            UIManager.Instance.UpdateExecutedEnemyTxt(JetLevel + EnemyVehicleHealth.executedEnemyCount / neededKillScoreForLevelUp);
     }
 }

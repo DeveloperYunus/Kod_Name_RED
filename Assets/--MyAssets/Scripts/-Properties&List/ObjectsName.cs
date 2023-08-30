@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectsName : MonoBehaviour
 {
-    public string Name;
+    [SerializeField] private string Name;
 
     //Work mobile and pc (active when player click which object with this script attached)
     private void OnMouseDown()
@@ -10,4 +10,5 @@ public class ObjectsName : MonoBehaviour
         GeometricObjectList.Instance.SelectedObjectName = Name;
         Debug.Log("You select " + Name + " object.");
     }
+
 }
