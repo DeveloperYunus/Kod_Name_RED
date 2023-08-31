@@ -19,7 +19,7 @@ public class JetController : MonoBehaviour
     float _forwardSpeed;                                         // Uçaðýn ileri doðrurultutaki (forward) toplam hýzý
     float _enginePower;                                          // Motora verilen güç
     float _aeroFactor;
-    float _altitude;                                             // rakým - yerden yükseklik
+    public float Altitude;                                             // rakým - yerden yükseklik
 
     [HideInInspector] public float throttleAmount;
     float pitch, roll, yaw;
@@ -161,7 +161,7 @@ public class JetController : MonoBehaviour
         CalculateTorque();
 
         CalculateAltitude();                          //Ýsteðe baðlý olarak kullanýlabilir
-        altitudeText.text = _altitude.ToString("0.0") + " m";
+        altitudeText.text = Altitude.ToString("0.0") + " m";
     }
 
     private void CalculateForwardSpeed()
@@ -243,6 +243,6 @@ public class JetController : MonoBehaviour
     {
         // Rakým hesaplamalarý - uçaðýn kendi collider'larýyla çarpýþmayý önlemek için güvenli bir mesafenin altýndan baþlayarak, uçaktan aþaðý doðru bir raycast gönderiyoruz.
         var ray = new Ray(transform.position - Vector3.up * 10, -Vector3.up);
-        _altitude = Physics.Raycast(ray, out RaycastHit hit) ? hit.distance + 10 : transform.position.y;
+        Altitude = Physics.Raycast(ray, out RaycastHit hit) ? hit.distance + 10 : transform.position.y;
     }
 }

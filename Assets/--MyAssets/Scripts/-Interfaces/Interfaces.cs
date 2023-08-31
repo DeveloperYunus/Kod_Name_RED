@@ -8,6 +8,12 @@ public interface IKillable
 }
 
 
+public interface IIgnorableForRocket
+{
+
+}
+
+
 public interface IDamageTakeable<T>
 {
     void TakeDamage(T damageAmount);

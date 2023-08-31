@@ -17,6 +17,8 @@ public class JetRocketController : MonoBehaviour
     [SerializeField] private GameObject rocketObj;
     [SerializeField] private Transform rocketMuzzle;
     [SerializeField] private float rocketSpeed;
+    [SerializeField] private float rocketDamage;
+    [SerializeField] private float rocketLeftTime;
 
     private void Awake()
     {
@@ -76,15 +78,30 @@ public class JetRocketController : MonoBehaviour
 
     public void SendRocket()
     {
-        GameObject rocket = Instantiate(rocketObj, rocketMuzzle.position, rocketMuzzle.rotation);
+        if (GetComponent<JetController>().Altitude < 25)
+            return;
 
+        if (Mathf.Abs(transform.eulerAngles.z) < 260 && Mathf.Abs(transform.eulerAngles.z) > 100)
+            return;
+
+        GameObject rocket = Instantiate(rocketObj, rocketMuzzle.position, rocketMuzzle.rotation);
+        rocket.GetComponent<Rocket>().Damage = rocketDamage;
+
+        rocket.GetComponent<Rigidbody>().velocity = Vector3.up * -20 + GetComponent<Rigidbody>().velocity;
+
+        StartCoroutine(RocketVelocity(rocketLeftTime, rocket));
+    }
+
+    private IEnumerator RocketVelocity(float timer, GameObject rocket)
+    {
+        yield return new WaitForSeconds(timer);
         if (canRocketFollow)
-        {            
-            rocket.GetComponent<Rigidbody>().velocity = rocketMuzzle.forward * rocketSpeed;
+        {
+            rocket.GetComponent<Rigidbody>().velocity = rocket.transform.forward * rocketSpeed;
         }
         else
         {
-            rocket.GetComponent<Rigidbody>().velocity = rocketMuzzle.forward * rocketSpeed;
+            rocket.GetComponent<Rigidbody>().velocity = rocket.transform.forward * rocketSpeed;
         }
     }
 }

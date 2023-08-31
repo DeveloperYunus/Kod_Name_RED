@@ -21,9 +21,6 @@ List – Properties --- Bitti
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
 
 
-	- Güdümlü füzeyi yap
-	- Temas halinde hasar versin ve patlasýn
-
 ------
 
 Object poolin i ve diðer scriptleri düzenle, dinamik ve solid hale getir
