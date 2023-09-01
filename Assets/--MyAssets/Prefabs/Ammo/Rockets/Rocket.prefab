@@ -4926,7 +4926,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e7258e348872143b0bb1f8494e458b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 200
+  Damage: 60
+  RocketSpeed: 300
+  rotateSensitivity: 1
+  canRocketFollow: 0
+  target: {fileID: 0}
   explosionEffect: {fileID: 8645947434096807139, guid: 1d4555532db68d14e95b8cb267177d56,
     type: 3}
 --- !u!1 &1677798401310091237

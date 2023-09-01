@@ -7,6 +7,8 @@ public class EnemyVehicleHealth : MonoBehaviour, IDamageTakeable<float>
     [SerializeField] private float maxHealth;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Image healthFilledImage;
+    [SerializeField] private GameObject dieObject;
+
 
     [Header("--- Exp Effect ---")]
     [SerializeField] private GameObject expEffect;
@@ -72,6 +74,6 @@ public class EnemyVehicleHealth : MonoBehaviour, IDamageTakeable<float>
             Instantiate(expEffect, transform.position + new Vector3(xRandom, yRandom, zRandom), Quaternion.identity);
         }
         DestroyEnemy();
-        Destroy(gameObject);
+        Destroy(dieObject == null ? gameObject : dieObject);
     }
 }

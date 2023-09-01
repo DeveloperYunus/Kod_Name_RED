@@ -12,10 +12,14 @@ public class CrossAirController : MonoBehaviour
     private Camera cameraa;
     private float lockTimer;
 
+    public bool isLocked = false;
+
 
     private void Awake()
     {
         Instance = this;
+
+        isLocked = false;
         cameraa = UIManager.Instance.Camera.GetComponent<Camera>();
     }
     private void FixedUpdate()
@@ -25,9 +29,19 @@ public class CrossAirController : MonoBehaviour
 
     private void CrossAirLockState()
     {
+        crossAirImage.DOKill();
+        crossAirImage.GetComponent<Image>().DOKill();
+
         if (lockedTransform != null)
         {
             crossAirImage.DOMove(cameraa.WorldToScreenPoint(lockedTransform.position), lockTimer);
+            crossAirImage.DOLocalMoveZ(0, 0);
+
+            if (isLocked)
+            {
+                crossAirImage.GetComponent<Image>().DOColor(Color.red, 0);
+                return;
+            }
             crossAirImage.GetComponent<Image>().DOColor(Color.cyan, lockTimer);
         }
         else
@@ -35,11 +49,15 @@ public class CrossAirController : MonoBehaviour
             crossAirImage.DOLocalMove(new Vector3(0, 0, 0), 0.3f);
             crossAirImage.GetComponent<Image>().DOColor(Color.white, 0.3f);
         }
-    }
-    public void SetLocketState(Transform lockedObject, float lockTime)
+    }   
+    public void SetLocketTransform(Transform lockedObject, float lockTime)
     {
-        lockTimer = lockTime;
         lockedTransform = lockedObject;
+        lockTimer = lockTime;
+    }
+    public void SetLockState(bool lockState)
+    {
+        isLocked = lockState;
     }
 }
 

@@ -13214,6 +13214,7 @@ MonoBehaviour:
   pitchContSens: 0.55
   rollContSens: 0.08
   yawContSens: -0.55
+  Altitude: 0
   throttleAmount: 0
   dragIncreaseFactor: 0.001
   gear: {fileID: 5557667320813485497}
@@ -13324,14 +13325,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35b181d495d46f47a18e01fa90379e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockRayDistance: 1000
+  lockRayDistance: 3000
   checkLockControlTime: 0.1
-  lockTimer: 1
+  lockTime: 1
   rocketObj: {fileID: 871466147453593113, guid: 4ac16eedf966571458baf46c15cbc27d,
     type: 3}
   rocketMuzzle: {fileID: 2167845857985985620}
-  rocketSpeed: 250
-  rocketDamage: 50
+  rocketSpeed: 400
+  rocketDamage: 65
+  rotateSensitivity: 0.9
+  rocketLeftTime: 0.4
 --- !u!1 &2569217326890003839
 GameObject:
   m_ObjectHideFlags: 0
@@ -46732,7 +46735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8926135427815715625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.759, y: 4.399, z: -3.387}
+  m_LocalPosition: {x: 16.759, y: 4.399, z: -3.381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
