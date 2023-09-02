@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 8400332040917694266}
   - component: {fileID: 8892340235371310895}
   - component: {fileID: 8033161406235754323}
+  - component: {fileID: 2506697191185030256}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -282,6 +283,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e12b8becae7912409f726c75b158ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &2506697191185030256
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838735265550813731}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4706015119237181111
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,16 +398,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4732007265203181797}
-  m_LocalRotation: {x: -0, y: 0.51631457, z: -0, w: 0.85639906}
+  m_LocalRotation: {x: 0, y: 0.5163166, z: 0, w: 0.85639787}
   m_LocalPosition: {x: 371.79, y: 19.42, z: 1908.72}
-  m_LocalScale: {x: 1.0177002, y: 1.0177, z: 1.0177002}
+  m_LocalScale: {x: 1.0177001, y: 1.0177, z: 1.0177001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3765708758446888894}
   - {fileID: 1970432868701082532}
   - {fileID: 461900667157857297}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 62.171, z: 0}
 --- !u!65 &5276286391763656740
 BoxCollider:
@@ -411,7 +424,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -430,8 +443,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  hpCanvas: {fileID: 2506697191185030256}
+  canvasFadeDownTime: 3
   healthText: {fileID: 2395390764356910429}
   healthFilledImage: {fileID: 5154468347033775976}
+  dieObject: {fileID: 0}
   expEffect: {fileID: 1439484002296768439, guid: f3949b6ce2479244e99925ca42ef4f2a,
     type: 3}
   expAmount: 3

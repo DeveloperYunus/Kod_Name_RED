@@ -77,7 +77,7 @@ public class JetRocketController : MonoBehaviour
 
     public void SendRocket()
     {
-        if (GetComponent<JetController>().Altitude < 25)
+        if (GetComponent<JetController>().Altitude < 15)
             return;
 
         if (Mathf.Abs(transform.eulerAngles.z) < 260 && Mathf.Abs(transform.eulerAngles.z) > 100)

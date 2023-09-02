@@ -4,8 +4,9 @@ public class WhichJetSelected : MonoBehaviour
 {
     [Tooltip("0 = KIZILELMA")]
     [SerializeField] private int defaultStarterJetID;
+    public static GameObject SelectedJet;
 
-    private void Start()
+    private void OnEnable()
     {
         WhichJetSelectedd();
     }
@@ -20,39 +21,9 @@ public class WhichJetSelected : MonoBehaviour
             if (transform.GetChild(i).gameObject.GetComponent<JetID>().JetIDNumber == id)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
-                //CrossAirController.Instance.SetActiveJetTransform(transform.GetChild(i));
+                SelectedJet = transform.GetChild(i).gameObject;
                 return;
             }
         }
-
-
-        if (id == 0)
-        {
-            Debug.Log(SumTwoNumber(2, 4));
-        }
-        else
-        {
-            Debug.Log(SumTwoNumber("2", "4"));
-        }
-    }
-
-    void Sum()
-    {
-        SumTwoNumber(2, "1");
-    }
-
-    private int SumTwoNumber(int num1, int num2)
-    {
-        return num1 + num2;
-    }
-
-    private int SumTwoNumber(int num1, string num2)
-    {
-        return num1 + int.Parse(num2);
-    }
-
-    private int SumTwoNumber(string num1, string num2)
-    {
-        return int.Parse(num1) + int.Parse(num2);
     }
 }

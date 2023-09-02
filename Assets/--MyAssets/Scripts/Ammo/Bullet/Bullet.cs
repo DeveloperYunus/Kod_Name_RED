@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour, IPoolable, IDamageGivable<float>
@@ -51,6 +52,8 @@ public class Bullet : MonoBehaviour, IPoolable, IDamageGivable<float>
     }
     public void DieTimer()
     {
+        GetComponent<TrailRenderer>().Clear();
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         Pool.HavuzaObjeEkle(gameObject);
     }
 }
