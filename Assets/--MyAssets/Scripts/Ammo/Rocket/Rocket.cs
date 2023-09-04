@@ -63,7 +63,7 @@ public class Rocket : MonoBehaviour, IKillable
         canRocketFollow = canRocketFollowTarget;
         target = lockedObject;
 
-        if (!canRocketFollow)
+        if (!canRocketFollow && gameObject)
         {
             GetComponent<Rigidbody>().velocity = transform.forward * RocketSpeed;
         }

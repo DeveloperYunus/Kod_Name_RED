@@ -19,7 +19,7 @@ public class JetController : MonoBehaviour
     float _forwardSpeed;                                         // Uçaðýn ileri doðrurultutaki (forward) toplam hýzý
     float _enginePower;                                          // Motora verilen güç
     float _aeroFactor;
-    public float Altitude;                                             // rakým - yerden yükseklik
+    [HideInInspector] public float Altitude;                                             // rakým - yerden yükseklik
 
     [HideInInspector] public float throttleAmount;
     float pitch, roll, yaw;

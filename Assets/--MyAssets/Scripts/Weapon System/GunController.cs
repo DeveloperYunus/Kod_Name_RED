@@ -6,6 +6,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     [Header("       ----- GUNS -----")]
+    [SerializeField] private AudioSource machineGunSound;
 
     [Header("--- Minigun ---")]
     [SerializeField] private Minigun minigun;
@@ -58,6 +59,15 @@ public class GunController : MonoBehaviour
             else
                 attackSpeed -=Time.deltaTime;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            machineGunSound.Play();
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            machineGunSound.Stop();
+        }
     }
 
     private void GunChanger()
@@ -82,6 +92,7 @@ public class GunController : MonoBehaviour
             minigun.ScreenShake();
 
             attackSpeed = minigunAttackSpeed;
+            machineGunSound.pitch = 1;
         }
         else
         {
@@ -91,6 +102,7 @@ public class GunController : MonoBehaviour
             rifle.Sparkling();
 
             attackSpeed = rifleAttackSpeed;
+            machineGunSound.pitch = 0.55f;
         }
     }
 }

@@ -13141,6 +13141,7 @@ GameObject:
   - component: {fileID: 9063455319724490303}
   - component: {fileID: 6206704973380819489}
   - component: {fileID: 2710781606115298526}
+  - component: {fileID: 1152652861665201847}
   m_Layer: 0
   m_Name: Player - KIZILELMA
   m_TagString: Untagged
@@ -13211,9 +13212,9 @@ MonoBehaviour:
   m_AerodynamicEffect: 0.02
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
-  pitchContSens: 0.65
-  rollContSens: 0.1
-  yawContSens: -0.6
+  pitchContSens: 0.7
+  rollContSens: 0.12
+  yawContSens: -0.65
   Altitude: 0
   throttleAmount: 0
   dragIncreaseFactor: 0.001
@@ -13259,7 +13260,7 @@ MonoBehaviour:
     type: 3}
   jetCM: {fileID: 1260980508230940989}
   crashCM: {fileID: 8761498617943137915}
-  restartTime: 2
+  restartSceneTime: 3.5
 --- !u!114 &5570274608613718547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13272,6 +13273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31bc3226d8cc4646bca8c0bc4d11135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  machineGunSound: {fileID: 1152652861665201847}
   minigun: {fileID: 1898854982426622677}
   minigunBulletDamage: 3
   minigunMuzzle1: {fileID: 5943804344787695687}
@@ -13332,10 +13334,106 @@ MonoBehaviour:
   rocketObj: {fileID: 871466147453593113, guid: 4ac16eedf966571458baf46c15cbc27d,
     type: 3}
   rocketMuzzle: {fileID: 2167845857985985620}
-  rocketSpeed: 400
+  rocketSpeed: 450
   rocketDamage: 65
-  rotateSensitivity: 0.9
+  rotateSensitivity: 0.85
   rocketLeftTime: 0.4
+--- !u!82 &1152652861665201847
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565071569030942075}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e7cf3c3b273ce545ab686ccb20c33ee, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2569217326890003839
 GameObject:
   m_ObjectHideFlags: 0
@@ -20634,7 +20732,7 @@ MonoBehaviour:
     FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 4000
+    FarClipPlane: 6000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}

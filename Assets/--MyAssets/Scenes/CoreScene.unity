@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1928.822, g: 2255.7244, b: 2914.2844, a: 1}
+  m_IndirectSpecularColor: {r: 1928.8103, g: 2255.7283, b: 2914.2375, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18506,11 +18506,6 @@ PrefabInstance:
       propertyPath: activeGunText
       value: 
       objectReference: {fileID: 281443495}
-    - target: {fileID: 6540042104692661387, guid: 415c3752d12c9944aaa82d3469c7a598,
-        type: 3}
-      propertyPath: restartSceneTime
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -90787,7 +90782,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 4000
+  far clip plane: 6000
   field of view: 60
   orthographic: 0
   orthographic size: 5
