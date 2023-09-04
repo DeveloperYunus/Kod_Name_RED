@@ -1388,6 +1388,7 @@ MonoBehaviour:
   pitchContSens: 0.65
   rollContSens: 0.6
   yawContSens: -0.6
+  Altitude: 0
   throttleAmount: 0
   dragIncreaseFactor: 0.001
   gear: {fileID: 3834603960973440100}
@@ -1427,11 +1428,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   armour: 10
-  dieCrashImpulse: 6
+  dieCrashImpulse: 5
   crashExp: {fileID: 1439484002296768439, guid: f3949b6ce2479244e99925ca42ef4f2a,
     type: 3}
   jetCM: {fileID: 1076482927677159348}
   crashCM: {fileID: 3078514901339099435}
+  restartTime: 2
 --- !u!114 &173516711412720629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,10 +1500,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35b181d495d46f47a18e01fa90379e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockRayDistance: 0
-  checkLockControlTime: 0
-  lockTimer: 0
-  rocketObj: {fileID: 0}
+  lockRayDistance: 3000
+  checkLockControlTime: 0.1
+  lockTime: 1
+  rocketObj: {fileID: 871466147453593113, guid: 4ac16eedf966571458baf46c15cbc27d,
+    type: 3}
+  rocketMuzzle: {fileID: 0}
+  rocketSpeed: 400
+  rocketDamage: 65
+  rotateSensitivity: 0.9
+  rocketLeftTime: 0.4
 --- !u!1 &1309288292203824737
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,9 +21,7 @@ List – Properties --- Bitti
 	Properties ile bir liste oluþtur. Baþka classlardan bu listenin fonksiyonlarýný çaðýr ve birkaç iþlem gerçekleþtir.
 
 
-
 ------------------------
 
 Object poolin i ve diðer scriptleri düzenle, dinamik ve solid hale getir
 Addressable optimization'ý kullan
-

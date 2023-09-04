@@ -13211,9 +13211,9 @@ MonoBehaviour:
   m_AerodynamicEffect: 0.02
   m_Lift: 0.002
   m_ZeroLiftSpeed: 300
-  pitchContSens: 0.55
-  rollContSens: 0.08
-  yawContSens: -0.55
+  pitchContSens: 0.65
+  rollContSens: 0.1
+  yawContSens: -0.6
   Altitude: 0
   throttleAmount: 0
   dragIncreaseFactor: 0.001
@@ -13259,6 +13259,7 @@ MonoBehaviour:
     type: 3}
   jetCM: {fileID: 1260980508230940989}
   crashCM: {fileID: 8761498617943137915}
+  restartTime: 2
 --- !u!114 &5570274608613718547
 MonoBehaviour:
   m_ObjectHideFlags: 0

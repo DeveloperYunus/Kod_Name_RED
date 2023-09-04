@@ -1,18 +1,21 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JetHealth : MonoBehaviour
 {
     [Header("Health System")]
-    public float maxHealth;
-    public float armour;
-    public float dieCrashImpulse;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float armour;
+    [SerializeField] private float dieCrashImpulse;
 
     float health;
     bool live = true;
 
     [Header("Crash")]
-    public GameObject crashExp;
-    public Transform jetCM, crashCM;                  //uçak zemine çarpýnca aktif olacak kamera
+    [SerializeField] private GameObject crashExp;
+    [SerializeField] private Transform jetCM, crashCM;                  //uçak zemine çarpýnca aktif olacak kamera
+    [SerializeField] private float restartSceneTime;
 
 
     void Start()
@@ -31,7 +34,13 @@ public class JetHealth : MonoBehaviour
             crashCM.transform.SetParent(null);
             crashCM.gameObject.SetActive(true);
 
-            Destroy(gameObject);
+            Invoke(nameof(RestartScene), restartSceneTime);
+            gameObject.SetActive(false);
         }
+    }
+
+    private void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
