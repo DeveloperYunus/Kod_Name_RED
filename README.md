@@ -44,4 +44,17 @@ The aircraft physics codes I added to this project have been taken from the repo
 
 -----
 
-## Fourth Devlog : Loading ...
+## Fourth Devlog : Combat Systems
+
+  - Enemy hp system complete, now enemy ship destroyable
+  - Home missile system complete
+  - Jet bullet and rocket give damage.
+  - Line minimap added to top side of screen
+  - Jet has a level system that increase with each enemy kill.
+
+### You can download this game in itch.io, 
+https://kehribar.itch.io/kizilelma
+
+### For go video, click on the photo below
+[<img src="https://i.imgur.com/XGM5w0Y.png" width="80%">](https://www.youtube.com/watch?v=o6inuCplCDA&t=8s "Devlog 4 Video")
+
